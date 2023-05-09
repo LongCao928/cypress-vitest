@@ -7,11 +7,15 @@
       <input type="text" v-model="data.name" />
       <div>{{ data.name }}</div>
     </div>
+    <div>Mouse position is at: {{ x }}, {{ y }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
+// composition
 import { ref, watch, watchEffect, reactive } from 'vue'
+import { useMouse } from '../mixins/mouse'
+const { x, y } = useMouse()
 interface IData {
   name: string
 }
