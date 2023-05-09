@@ -1,3 +1,5 @@
+// /// <reference types="vitest" />
+// 使用 vite 的 defineConfig 配置 vitest 时需要将`三斜线指令`写在配置文件的顶部。
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
@@ -11,5 +13,6 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  // test: {}
 })
