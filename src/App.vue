@@ -1,10 +1,18 @@
 <script setup lang="ts">
+import { ref, watchEffect } from 'vue'
+import { useRouter } from 'vue-router'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+const isShowHeader = ref(false)
+const router = useRouter()
+watchEffect(() => {
+  console.log(router.currentRoute.value)
+  router.currentRoute.value.meta.isHideHeader ? isShowHeader.value = false : isShowHeader.value = true
+})
 </script>
 
 <template>
-  <header>
+  <header v-if="isShowHeader">
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">

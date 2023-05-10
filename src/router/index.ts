@@ -33,22 +33,24 @@ const router = createRouter({
       name: 'accessDeny',
       component: () => import('@/views/base/access-deny/AccessDeny.vue'),
       meta: {
-        title: '无权访问'
+        title: '无权访问',
+        isHideHeader: true
       }
     },
     {
-      path: '/not-found',
+      path: "/:pathMatch(.*)*",
       name: 'notFound',
       component: () => import('@/views/base/not-found/NotFound.vue'),
       meta: {
-        title: '404...'
+        title: '404...',
+        isHideHeader: true
       }
     }
   ]
 })
 
 router.beforeEach((to, form, next) => {
-  console.log(to)
+  // console.log(to)
   if (to.meta) {
     document.title = to.meta.title ? `${to.meta.title}` : 'Vite App'
   }
