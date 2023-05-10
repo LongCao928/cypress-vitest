@@ -56,6 +56,10 @@ watchEffect(() => {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+  }
+  input {
+    margin-right: 10px;
   }
 }
 </style>
