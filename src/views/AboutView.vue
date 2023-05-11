@@ -2,9 +2,9 @@
   <div class="about">
     <h1>This is an about page</h1>
     <div>
-      <input type="text" v-model="val">
+      <input type="text" v-model="val" />
       <span>{{ val }}</span>
-      <input type="text" v-model="data.name" />
+      <input type="text" v-model="data.name" v-focus />
       <div>{{ data.name }}</div>
     </div>
     <div>Mouse position is at: {{ x }}, {{ y }}</div>
@@ -18,6 +18,7 @@
 // composition
 import { ref, watch, watchEffect, reactive } from 'vue'
 import { useMouse } from '../mixins/mouse'
+// import { vFocus } from '@/directives/focu'
 const { x, y } = useMouse()
 interface IData {
   name: string
@@ -55,7 +56,10 @@ watchEffect(() => {
   console.log(event)
  }
 
-
+//  指令
+/* const vFocus = {
+  mounted: (el) => el.focus()
+} */
 
 </script>
 
