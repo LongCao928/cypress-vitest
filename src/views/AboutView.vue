@@ -8,6 +8,9 @@
       <div>{{ data.name }}</div>
     </div>
     <div>Mouse position is at: {{ x }}, {{ y }}</div>
+    <GlobalComponentA msg="about" @click-event="handleComClick">
+      slot content
+    </GlobalComponentA>
   </div>
 </template>
 
@@ -47,6 +50,12 @@ watchEffect(() => {
  * 2. watch 需要明确执行监听的数据源，watchEffect 会自动追踪所有访问到的响应式属性。
  * 相同点：都可以监听响应式数据并执行回调。
  */
+
+ function handleComClick(event: number) {
+  console.log(event)
+ }
+
+
 
 </script>
 

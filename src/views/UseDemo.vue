@@ -1,15 +1,16 @@
 
 <template>
-   <div>
-      Load post id:
-      <button v-for="i in 5" @click="id = i" :key="i">{{ i }}</button>
-      <div v-if="error">Oops! Error encountered: {{ error.message }}</div>
-      <div v-else-if="data">
-        Data loaded:
-        <pre>{{ data }}</pre>
-      </div>
-      <div v-else>Loading...</div>
-   </div>
+  <!-- <GlobalComponentA msg="demo"></GlobalComponentA> -->
+  <div>
+    Load post id:
+    <button v-for="i in 5" @click="id = i" :key="i">{{ i }}</button>
+    <div v-if="error">Oops! Error encountered: {{ error.message }}</div>
+    <div v-else-if="data">
+      Data loaded:
+      <pre>{{ data }}</pre>
+    </div>
+    <div v-else>Loading...</div>
+  </div>
 </template>
 
 <script setup lang="ts">
