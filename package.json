@@ -1,7 +1,13 @@
 {
   "name": "new-v3-vite-ts",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
+  "type": "module",
+  "description": "use cypress and vite",
+  "author": {
+    "name": "caolong",
+    "email": "1414851268@qq.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
