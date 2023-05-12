@@ -1,6 +1,10 @@
 
 import { ref, unref, isRef, watchEffect, type Ref } from 'vue'
 
+/* interface IError {
+  [key: string]: any
+  message?: string
+} */
 
 export function useFetch(url: string) {
   const data = ref(null)

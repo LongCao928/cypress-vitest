@@ -22,6 +22,7 @@ const url = computed((): string => baseURL + id.value)
 // const url = ref('https://jsonplaceholder.typicode.com/todos/1')
 // useFetch(url)
 // const url = 'http://jsonplaceholder.typicode.com/todos'
+
 const { data, error } = useFetchWatch(url)
 </script>
 
