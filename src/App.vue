@@ -24,7 +24,6 @@ watchEffect(() => {
       </nav>
     </div>
   </header>
-
   <RouterView />
 </template>
 
